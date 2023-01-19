@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+# Running the App
+Go into the project directory and run:
+`npm start`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My Implementation
+My main solution to the problem was to create responsive breakpoints or CSS media queries, where I defined certain dimensions that would indicate that the device was mobile and adjusted the frontend design accordingly to fit the screen. The main breakpoints I set were 768px, 992px, and 1080px as these were the most popular dimensions across all devices. When the app identifies that it has reached a tablet/mobile screen or 768px width, the columns adjust accordingly to stack against each other instead of being side to side so that users don't have to scroll horizontally.
 
-## Available Scripts
+In addition to this, I defined font sizes using rem instead of set pixels. In order to ensure that font sizes change with respect to parent container width, rem allows the root font-size to scale proportionally rather than being static.
 
-In the project directory, you can run:
+Another solution I used to create this outcome is by using fluidity. Instead of setting specific pixels to define the width, height, and padding of elements, I could use percentages to define columns and grids. This allows the website to be responsive to different screens by scaling them to fit the mobile screen according the proportions set rather than using fixed dimensions. 
 
-### `npm start`
+For the navigation bar, I create the function GetWindowDimension to detect when the screen reached below 768px, indicating a tablet or mobile device, so that I could switch to using a hamburger menu instead of displaying the navigation buttons up on the screen. This was done as hamburger menus are commonly used among websites and are quite intuitive to the user while adequately being able to fit the screen instead of the buttons going off to the side.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Overall, I made use of general CSS techniques to set breakpoints and ensure the website was responsive to a general number of screen sizes. I also made use of a hook function when building the mobile navigation bar as I felt it was the easiest way to completely change the way the menu is being displayed respectively across screens.
